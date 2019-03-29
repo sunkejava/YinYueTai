@@ -35,6 +35,7 @@
             // 
             // axPlayer
             // 
+            this.axPlayer.AllowDrop = true;
             this.axPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -44,6 +45,7 @@
             this.axPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPlayer.OcxState")));
             this.axPlayer.Size = new System.Drawing.Size(863, 575);
             this.axPlayer.TabIndex = 0;
+            this.axPlayer.OnMessage += new AxAPlayer3Lib._IPlayerEvents_OnMessageEventHandler(this.axPlayer_OnMessage);
             // 
             // MainForm
             // 
