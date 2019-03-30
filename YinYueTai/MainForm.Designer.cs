@@ -29,23 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.axPlayer = new AxAPlayer3Lib.AxPlayer();
-            ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).BeginInit();
+            this.axPlayer1 = new AxAPlayer3Lib.AxPlayer();
+            ((System.ComponentModel.ISupportInitialize)(this.axPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
-            // axPlayer
+            // axPlayer1
             // 
-            this.axPlayer.AllowDrop = true;
-            this.axPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.axPlayer.Enabled = true;
-            this.axPlayer.Location = new System.Drawing.Point(8, 25);
-            this.axPlayer.Name = "axPlayer";
-            this.axPlayer.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPlayer.OcxState")));
-            this.axPlayer.Size = new System.Drawing.Size(863, 575);
-            this.axPlayer.TabIndex = 0;
-            this.axPlayer.OnMessage += new AxAPlayer3Lib._IPlayerEvents_OnMessageEventHandler(this.axPlayer_OnMessage);
+            this.axPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axPlayer1.Enabled = true;
+            this.axPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axPlayer1.Name = "axPlayer1";
+            this.axPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axPlayer1.OcxState")));
+            this.axPlayer1.Size = new System.Drawing.Size(878, 608);
+            this.axPlayer1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -53,19 +49,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.ClientSize = new System.Drawing.Size(878, 608);
-            this.Controls.Add(this.axPlayer);
+            this.Controls.Add(this.axPlayer1);
             this.Name = "MainForm";
             this.Radius = 25;
             this.Text = "音悦台";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axPlayer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.axPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private AxAPlayer3Lib.AxPlayer axPlayer;
+        private AxAPlayer3Lib.AxPlayer axPlayer1;
     }
 }
 

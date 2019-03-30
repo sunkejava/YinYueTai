@@ -7,10 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using LayeredSkin.Forms;
+using AxAPlayer3Lib;
+
 namespace YinYueTai
 {
     public partial class MainForm : LayeredForm
     {
+        AxPlayer _axPlayer;
         public MainForm()
         {
             InitializeComponent();
@@ -18,15 +21,11 @@ namespace YinYueTai
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //string cUrl = "http://112.253.22.159/26/g/y/b/g/gybgsjmefinvgmtgorihtjcurdvsxb/hd.yinyuetai.com/E7B0015CEA430A24FB11D8EC416E4349.mp4";
-            //axPlayer.Open(cUrl);
-            //axPlayer.SetVolume(10);
-            //axPlayer.Play();
-        }
-
-        private void axPlayer_OnMessage(object sender, AxAPlayer3Lib._IPlayerEvents_OnMessageEvent e)
-        {
-
+            _axPlayer = axPlayer1;
+            string cUrl = "http://112.253.22.159/26/g/y/b/g/gybgsjmefinvgmtgorihtjcurdvsxb/hd.yinyuetai.com/E7B0015CEA430A24FB11D8EC416E4349.mp4";
+            _axPlayer.Open(cUrl);
+            _axPlayer.SetVolume(10);
+            _axPlayer.Play();
         }
     }
 }
